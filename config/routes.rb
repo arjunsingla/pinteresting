@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "pages#home"
   get "about" => 'pages#about' # Creates about_path
   get "contact_us" => 'pages#contact_us' # Creates contact_us_path
-  get "signup" => 'pages#signup' # Creates signup_path
-  get "login" => 'pages#login' # Creates login_path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

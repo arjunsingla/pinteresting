@@ -7,10 +7,4 @@ class PagesController < ApplicationController
 
   def contact_us
   end
-
-  def signup
-  end
-
-  def login
-  end
 end
