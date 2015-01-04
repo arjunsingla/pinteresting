@@ -20,11 +20,12 @@
         <% if user_signed_in? %>
           <li><%= link_to "About Us", about_path %></li>
           <li><%= link_to "Contact Us", contact_us_path %></li>
+          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
           <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
        <% else %>
           <li><%= link_to "About Us", about_path %></li>
           <li><%= link_to "Contact Us", contact_us_path %></li>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
+          <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Are You New? Sign Up!", new_user_registration_path %></li> 
         <% end %>
       </ul>
