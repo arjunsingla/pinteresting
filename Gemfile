@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise', '~> 3.4.1'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk', '~> 1.60.2'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -58,6 +59,5 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
-  
 end
 
