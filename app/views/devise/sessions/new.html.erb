@@ -2,11 +2,10 @@
   <div class="panel-heading">
     <h1>Log In</h1>
   </div>
-
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<ul class=".navbar-left">  
   <div class="panel-body">
     <div class="col-md-4">
-      <ul class= ".navbar-left">
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group">
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true, class: "form-control" %>
@@ -23,9 +22,9 @@
             <%= f.label :remember_me %>
           </div>
          <% end -%>
-        </ul>
     </div>
   </div>
+</ul>
 
     <div class="panel-footer">
       <ul class=".navbar-left">

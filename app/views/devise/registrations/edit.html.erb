@@ -2,11 +2,10 @@
   <div class="panel-heading">
     <h1>Edit <%= resource_name.to_s.humanize %></h1>
   </div>
-
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<ul class=".navbar-left">
   <div class="panel-body">
     <div class="col-md-5">
-      <div class=".navbar-left">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= devise_error_messages! %>
 
           <div class="form-group">
@@ -32,17 +31,17 @@
             <%= f.label :current_password %><i> (Neccessary for making changes)</i><br />
             <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
           </div>
-      </div>
     </div>
   </div>
+</ul>
 
   <div class="panel-footer">
-    <div class=".navbar-left">
+    <ul class=".navbar-left">
       <div class="form group">
         <%= f.submit "Update", class: "btn btn-success" %>
       </div>
         <% end %>
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -51,11 +50,15 @@
     <h3>Cancel my account</h3>
   </div>
   <div class="panel-body">   
+    <ul class=".navbar-left">  
       <p>Unhappy?
        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
+    </ul>
   </div>
   <div class="panel-footer">
-    <%= link_to "Back", :back %>
+    <ul class=".navbar-left">
+      <%= link_to "Back", :back %>
+    </ul>
   </div>
 </div>
 
