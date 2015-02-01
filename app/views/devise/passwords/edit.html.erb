@@ -2,33 +2,32 @@
   <div class="panel-heading">
     <h1>Change your password</h1>
   </div>
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-<ul class=".navbar-left">  
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+
   <div class="panel-body">
-    <div class="col-md-4">
-            <%= devise_error_messages! %>
-            <%= f.hidden_field :reset_password_token %>
+    <%= devise_error_messages! %>
+    <ul class=".navbar-left">  
+      <div class="col-md-4">
+        <%= f.hidden_field :reset_password_token %>
 
-            <div class="form-group">
-              <%= f.label :password, "New password" %><br />
-              <%= f.password_field :password, autofocus: true, autocomplete: "off", class: "form-control" %>
-            </div>
-
-            <div class="form-group">
-              <%= f.label :password_confirmation, "Confirm new password" %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-            </div>
-
-            <div class="form-group">
-              <%= f.submit "Change my password", class: "btn btn: success" %>
-            </div>
-          <% end %>
-</ul>
+        <div class="form-group">
+          <%= f.label :password, "New password" %><br />
+          <%= f.password_field :password, autofocus: true, autocomplete: "off", class: "form-control" %>
         </div>
-    </div>
-  </div>
 
-  
+        <div class="form-group">
+          <%= f.label :password_confirmation, "Confirm new password" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "Change my password", class: "btn btn: success" %>
+        </div>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+   
   <div class="panel-footer">
     <ul class=".navbar-left">
       <%= render "devise/shared/links" %>

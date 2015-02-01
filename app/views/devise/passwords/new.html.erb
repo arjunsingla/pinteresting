@@ -1,19 +1,20 @@
 <div class="panel panel-primary">
-  <div class="panel-heading">
-    <h1>Forgot your password?</h1>
-  </div>		
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-<ul class=".navbar-left">
-  	<div class="panel-body">
-  		<div class="col-md-4">
-		 		 <%= devise_error_messages! %>
+	<div class="panel-heading">
+    	<h1>Forgot your password?</h1>
+	</div>	
+		
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+	<div class="panel-body">
+		<%= devise_error_messages! %>
+		<ul class=".navbar-left">
+	  		<div class="col-md-4"> 
 		  		<div class="form group">
 				   <%= f.label :email %><br />
 				   <%= f.email_field :email, autofocus: true, class: "form-control" %>
 		  		</div>
-		</div>
+			</div>
+		</ul>
 	</div>
-</ul>
 
 	<div class="panel-footer">
 		<ul class=".navbar-left">		 
