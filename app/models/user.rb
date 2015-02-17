@@ -6,6 +6,5 @@ class User < ActiveRecord::Base
 
 	has_many :pins, dependent: :destroy 
 
-	validates :name, presence: true
-	validates :name, length: { minimum: 2 }
+	
 end
