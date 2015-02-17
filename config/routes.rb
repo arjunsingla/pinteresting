@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   root "pins#index"
-  get "about" => 'pages#about' # Creates about_path
-  get "contact_us" => 'pages#contact_us' # Creates contact_us_path
+  get "about_the_app" => 'pages#about_the_app' # Creates about_the_app_path
+  get "contact_me" => 'pages#contact_me' # Creates contact_me_path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
