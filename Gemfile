@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+ruby "2.2.4"
+# Added february 19th to avoid end-of-life, instructed to do so by heroku email
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
